@@ -1,0 +1,26 @@
+# AcreArch
+
+> AcreArch Pvt. Ltd. provides real estate advisory and property acquisition guidance in Noida, Uttar Pradesh, India.
+
+## Business details
+
+- Address: B/516, 5th Floor, Bhutani Techno Park, Sector 127, Noida, Uttar Pradesh 201301, India
+- Email: info@acrearch.com
+- Official phone: +91 120 412 6586
+- Website: https://acrearch.com/
+- Service area: Noida and Delhi NCR, India
+
+## Website pages
+
+- [Home](https://acrearch.com/): AcreArch real estate advisory overview
+- [Properties](https://acrearch.com/properties): Residential and commercial property listings
+- [Investment](https://acrearch.com/investment): Indian property investment calculator
+- [About](https://acrearch.com/about): Company background and leadership
+- [Contact](https://acrearch.com/contact): Contact and inquiry options
+
+## Topics
+
+- Residential property
+- Commercial property
+- Property acquisition
+- Real estate investment guidance

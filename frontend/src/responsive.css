@@ -1,0 +1,179 @@
+/* Final responsive layer. Loaded after styles.css to resolve legacy conflicts. */
+:root{--page-pad:clamp(1.25rem,5vw,6rem);--content-max:1500px}
+html,body,#root{width:100%;min-width:0}
+body{overflow-x:hidden}
+main{min-width:0}
+img,video,canvas,svg{max-width:100%}
+input,select,textarea,button{max-width:100%}
+.section-heading,.property-grid,.filter-results,.footer-grid,.footer-bottom{width:100%}
+
+/* Large desktop and TV displays */
+@media(min-width:1600px){
+  .navbar{padding-inline:max(5vw,4rem)}
+  .home-hero{padding-inline:max(8vw,7rem)}
+  .hero-content{max-width:880px}
+  .section,.split-section,.dark-section,.investment-layout,.contact-layout,.detail-content{padding-inline:max(7vw,6rem)}
+  .property-grid,.section-heading,.split-section,.investment-layout,.contact-layout,.detail-content{max-width:var(--content-max)}
+  .property-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .site-footer .footer-grid,.site-footer .footer-bottom{max-width:var(--content-max)}
+}
+
+/* Small laptops and landscape tablets */
+@media(max-width:1180px){
+  .navbar{padding-inline:2rem}
+  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;max-height:calc(100vh - 74px);overflow-y:auto;background:#101c33;padding:1.5rem 2rem 2rem;flex-direction:column;gap:.35rem;border-bottom:1px solid rgba(212,175,55,.25);box-shadow:0 18px 35px rgba(5,12,25,.35)}
+  .nav-links.open{display:flex}
+  .nav-links>a{width:100%;padding:.85rem;text-align:center}
+  .nav-links .mobile-cta{display:block;margin-top:.5rem}
+  .menu-button{display:block;background:none;border:0;color:#fff;font-size:1.35rem;min-width:44px;min-height:44px}
+  .desktop-cta{display:none}
+  .split-section,.dark-section,.investment-layout,.contact-layout,.detail-content{gap:3rem}
+  .property-filter-shell{position:static}
+  .filter-bar{justify-content:flex-start}
+  .property-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .admin-layout{grid-template-columns:1fr}
+  .admin-panel{min-width:0}
+  .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem}
+}
+
+/* Tablets */
+@media(max-width:900px){
+  h2{font-size:clamp(1.85rem,5vw,2.7rem)}
+  .section,.split-section,.dark-section,.investment-layout,.contact-layout,.detail-content{padding:4.5rem 2rem}
+  .home-hero{min-height:760px;padding:8rem 2rem 5rem;background-position:62% center!important}
+  .hero-content{max-width:680px}
+  .hero-content h1,.home-hero h1{font-size:clamp(2.5rem,7.5vw,4.2rem)}
+  .stats{grid-template-columns:repeat(2,1fr);padding:2.5rem 2rem}
+  .split-section,.dark-section,.investment-layout,.contact-layout,.detail-content{grid-template-columns:1fr}
+  .split-section .framed-image{order:-1}
+  .framed-image img{height:min(55vw,480px)}
+  .dark-section>div:first-child{max-width:680px}
+  .cards-three{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .page-hero{min-height:390px;padding:8.5rem 2rem 4rem}
+  .page-hero h1{font-size:clamp(2.15rem,6vw,3.5rem)}
+  .filter-bar{padding:1rem 1.25rem}
+  .type-buttons{width:100%;display:grid;grid-template-columns:repeat(4,1fr)}
+  .type-buttons button{white-space:nowrap}
+  .price-range{flex:1 1 310px}
+  .price-range input{flex:1;width:auto}
+  .advanced-filters{grid-template-columns:repeat(2,minmax(0,1fr));margin-inline:1.25rem;padding:1rem}
+  .detail-heading{padding:8rem 2rem 2.5rem}
+  .gallery{padding-inline:2rem}
+  .main-image{height:auto;aspect-ratio:16 / 10;max-height:none}
+  .detail-facts{grid-template-columns:repeat(2,1fr);padding-inline:2rem}
+  .detail-content aside{max-width:none}
+  .contact-layout aside{max-width:680px}
+  .dashboard{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .admin-main{padding:2.5rem 2rem}
+  .login-page{grid-template-columns:1fr}
+  .login-visual{min-height:360px;padding:2.5rem 2rem;gap:4rem}
+  .login-visual h1{font-size:clamp(2.4rem,7vw,4rem)}
+  .login-panel{padding:3.5rem 2rem}
+  .site-footer{padding-inline:2rem}
+}
+
+/* Phones */
+@media(max-width:600px){
+  :root{--page-pad:1.15rem}
+  .navbar{width:100vw;height:68px;padding-inline:1.15rem}
+  .navbar .brand{font-size:1rem;letter-spacing:.14em}
+  .navbar .brand-mark{width:34px;height:34px;margin-right:.55rem}
+  .menu-button{display:grid!important;place-items:center;position:absolute;right:1rem;top:12px}
+  .nav-links{top:68px;max-height:calc(100vh - 68px);padding-inline:1rem}
+  .button{width:100%;text-align:center;padding:.9rem 1rem}
+  .home-hero{min-height:100svh;padding:7rem 1.15rem 3.5rem;background-position:66% center!important}
+  .home-hero:before{content:'';position:absolute;inset:0;background:rgba(7,14,27,.2);z-index:0}
+  .home-hero .hero-content{width:calc(100vw - 2.3rem)!important;min-width:0;max-width:calc(100vw - 2.3rem)!important}
+  .hero-content h1,.home-hero h1{width:100%;max-width:100%;font-size:clamp(1.9rem,8.5vw,2.2rem);line-height:1.12;overflow-wrap:anywhere}
+  .hero-content h1 em{display:inline}
+  .hero-content>p{width:100%;max-width:100%!important;font-size:.92rem;line-height:1.65;overflow-wrap:anywhere}
+  .actions{width:100%;max-width:100%;gap:.75rem}
+  .stats{grid-template-columns:1fr 1fr;gap:1.75rem .75rem;padding:2.25rem 1rem}
+  .stats strong{font-size:1.55rem}
+  .stats span{font-size:.56rem;letter-spacing:.09em}
+  .section,.split-section,.dark-section,.investment-layout,.contact-layout,.detail-content{padding:3.75rem 1.15rem}
+  .section-heading{align-items:flex-start;gap:1rem;flex-direction:column;margin-bottom:2rem}
+  .section-heading h2{margin-bottom:0}
+  .feature-pair{flex-direction:column;gap:1rem}
+  .framed-image img{height:330px}
+  .property-grid,.cards-three{grid-template-columns:1fr;gap:1.25rem}
+  .card-image{height:245px}
+  .card-body{padding:1.25rem}
+  .facts{font-size:.68rem}
+  .calculator{padding:1.25rem}
+  .calculation-result>strong{font-size:1.75rem}
+  .page-hero{min-height:340px;padding:7.5rem 1.15rem 3.25rem}
+  .page-hero>div{width:calc(100vw - 2.3rem);min-width:0;max-width:calc(100vw - 2.3rem)}
+  .page-hero h1{width:100%;max-width:100%;font-size:clamp(1.7rem,7.5vw,2rem);overflow-wrap:anywhere}
+  .page-hero p{width:100%;max-width:100%;font-size:.86rem;overflow-wrap:anywhere}
+  .badge{max-width:100%;line-height:1.5;text-align:center}
+  .property-filter-shell{overflow:hidden}
+  .property-filter-shell .filter-bar{width:100%;padding:1rem;gap:.65rem}
+  .type-buttons{overflow-x:auto;display:flex;padding-bottom:.2rem}
+  .type-buttons button{flex:0 0 auto;min-width:104px}
+  .property-filter-shell select,.advanced-toggle{flex:1 1 calc(50% - .5rem);width:calc(50% - .5rem);min-height:44px;min-width:0}
+  .price-range{width:100%;flex-basis:100%}
+  .price-range input{min-width:0;width:calc(50% - 10px);padding-inline:.65rem}
+  .advanced-filters{grid-template-columns:1fr;margin:0 1rem 1rem}
+  .filter-results{align-items:flex-start;gap:.75rem;flex-direction:column}
+  .detail-heading{padding:7rem 1.15rem 2rem}
+  .detail-heading>strong{font-size:1.65rem}
+  .gallery{padding:0 1.15rem 2rem}
+  .main-image{height:auto;aspect-ratio:4 / 3;min-height:0}
+  .main-image button{width:38px;height:38px}
+  .thumbnails button{width:95px;height:60px}
+  .detail-facts{grid-template-columns:1fr 1fr;padding:1.5rem 1.15rem;gap:1rem}
+  .detail-content ul{padding-left:0}
+  .detail-content aside{position:static}
+  .detail-content aside h3{font-size:1.35rem}
+  .contact-layout form,.admin-panel{padding:1.25rem}
+  .form-grid,.admin-form{grid-template-columns:1fr}
+  .admin-form .wide{grid-column:auto}
+  .dashboard{grid-template-columns:1fr 1fr;gap:.75rem}
+  .dashboard article{padding:1rem}
+  .admin-main{padding:2rem 1rem}
+  .admin-intro{align-items:flex-start;gap:1rem;flex-direction:column}
+  .admin-list article{grid-template-columns:58px minmax(0,1fr);gap:.75rem}
+  .admin-list img{width:58px;height:58px}
+  .admin-list article>div:last-child{grid-column:2;display:flex;justify-content:flex-start}
+  .admin-header{padding-inline:1rem}
+  .admin-header div{gap:.75rem;font-size:.7rem}
+  .admin-header div>span{display:none}
+  .admin-logout{top:75px;right:1rem;padding:.55rem;background:#101c33;border:1px solid rgba(212,175,55,.4)}
+  .login-visual{min-height:320px;padding:2rem 1.25rem}
+  .login-visual h1{font-size:2.35rem}
+  .login-panel{padding:3rem 1.25rem}
+  .login-panel h2{font-size:2rem}
+  .site-footer{padding:3.5rem 1.15rem 1.75rem}
+  .site-footer .footer-grid{grid-template-columns:1fr;gap:2.5rem}
+  .site-footer .footer-bottom{align-items:flex-start;flex-direction:column;gap:1.25rem;margin-top:2.5rem}
+  .site-footer .footer-bottom div{flex-direction:column;gap:.65rem}
+}
+
+/* Very small phones */
+@media(max-width:380px){
+  .navbar .brand{font-size:.9rem}
+  .hero-content h1,.home-hero h1{font-size:1.95rem}
+  .stats{grid-template-columns:1fr}
+  .detail-facts,.dashboard{grid-template-columns:1fr}
+  .property-filter-shell select,.advanced-toggle{flex-basis:100%}
+  .terms{grid-template-columns:1fr}
+}
+
+/* Local CSS fallbacks for navigation icons when the icon CDN is unavailable. */
+.brand-mark{position:relative}
+.brand-mark::before{content:'◆';color:#d4af37;font-size:.72rem}
+.brand-mark>i{display:none}
+.menu-button::before{content:'☰';font-size:1.35rem;line-height:1}
+.menu-button>i{display:none}
+
+/* Short landscape screens */
+@media(max-height:520px) and (orientation:landscape){
+  .home-hero{min-height:620px;padding-top:7rem}
+  .nav-links{max-height:calc(100vh - 68px)}
+  .page-transition{overflow:auto}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

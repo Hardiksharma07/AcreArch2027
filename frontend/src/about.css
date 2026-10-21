@@ -1,0 +1,123 @@
+.about-page { background: #fff; overflow: hidden; }
+.about-page h2 em { color: var(--gold); font-style: normal; }
+
+.about-intro {
+  max-width: 1400px;
+  margin: auto;
+  padding: 8rem clamp(1.5rem, 7vw, 6rem);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(4rem, 8vw, 8rem);
+  align-items: center;
+}
+.about-intro-copy h2,
+.about-philosophy h2,
+.about-section-heading h2 {
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+}
+.about-lead { color: var(--navy); font-size: 1.08rem; font-weight: 500; }
+.about-signature { margin-top: 2rem; display: flex; gap: 1.25rem; align-items: center; }
+.about-signature > span { width: 3px; height: 54px; flex: none; background: var(--gold); }
+.about-signature p { margin: 0; color: var(--navy); font-family: Cinzel, serif; font-size: .9rem; line-height: 1.55; }
+
+.about-visual { min-height: 590px; position: relative; }
+.about-image-primary { position: absolute; inset: 0 0 4rem 12%; padding: .65rem; border: 1px solid rgba(212,175,55,.55); }
+.about-image-primary img, .about-image-secondary img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.about-image-secondary { position: absolute; width: 42%; height: 43%; left: 0; bottom: 0; padding: .45rem; background: #fff; box-shadow: 0 20px 50px rgba(16,28,51,.18); }
+.about-visual-badge { position: absolute; right: -2rem; bottom: 1.5rem; min-width: 190px; padding: 1.3rem; display: flex; gap: 1rem; align-items: center; background: var(--dark); color: #fff; border-left: 3px solid var(--gold); box-shadow: 0 15px 40px rgba(16,28,51,.25); }
+.about-visual-badge i { color: var(--gold); font-size: 1.6rem; }
+.about-visual-badge span { font-size: .7rem; line-height: 1.5; text-transform: uppercase; letter-spacing: .13em; }
+.about-visual-badge strong { color: var(--gold); font-family: Cinzel,serif; font-size: .9rem; }
+
+.about-expertise { background: var(--dark); display: grid; grid-template-columns: repeat(4,1fr); padding: 0 clamp(1.5rem,7vw,6rem); }
+.about-expertise div { position: relative; padding: 2.3rem clamp(1rem,3vw,3rem); display: grid; border-left: 1px solid rgba(212,175,55,.18); }
+.about-expertise div:last-child { border-right: 1px solid rgba(212,175,55,.18); }
+.about-expertise span { position: absolute; right: 1rem; top: .6rem; color: rgba(212,175,55,.12); font: 400 3.4rem Cinzel,serif; }
+.about-expertise strong { color: #fff; font: 500 1.1rem Cinzel,serif; }
+.about-expertise small { margin-top: .35rem; color: var(--gold); text-transform: uppercase; letter-spacing: .17em; font-size: .58rem; }
+
+.about-philosophy { padding: 8rem max(7vw,calc((100vw - 1200px)/2)); display: grid; grid-template-columns: .55fr 1.45fr; gap: 5rem; background: #f5f6f8; }
+.about-philosophy-label { display: flex; flex-direction: column; }
+.philosophy-rail { display: flex; align-items: stretch; gap: 2rem; margin-top: 2rem; }
+.philosophy-line { width: 1px; min-height: 240px; background: linear-gradient(var(--gold),transparent); }
+.about-philosophy-visual { padding: .7rem; border: 1px solid rgba(212,175,55,.45); background: #fff; box-shadow: 0 18px 45px rgba(16,28,51,.08); width: 270px; }
+.about-philosophy-visual img { display: block; width: 100%; height: 240px; object-fit: cover; }
+.about-philosophy h2 { font-size: clamp(2rem,4vw,3.5rem); }
+.about-philosophy p { max-width: 760px; font-size: 1rem; columns: 2; column-gap: 3rem; }
+
+.about-leadership, .about-commitment { padding: 8rem clamp(1.5rem,7vw,6rem); }
+.about-leadership { background: #fff; }
+.about-section-heading { max-width: 1200px; margin: 0 auto 4rem; display: flex; justify-content: space-between; align-items: end; gap: 3rem; }
+.about-section-heading h2 { margin: 0; }
+.about-section-heading > p { max-width: 440px; margin: 0; padding-left: 2rem; border-left: 1px solid var(--gold); }
+.leader-grid { max-width: 1200px; margin: auto; display: grid; gap: 1.5rem; }
+.leader-card { display: grid; grid-template-columns: .75fr 1.25fr; min-height: 315px; border: 1px solid #e1e4e9; transition: transform .3s, box-shadow .3s; }
+.leader-card:hover { transform: translateY(-4px); box-shadow: 0 20px 45px rgba(16,28,51,.1); }
+.leader-identity { position: relative; padding: 2.5rem; display: flex; flex-direction: column; justify-content: flex-end; color: white; background: linear-gradient(145deg,#1d3158,#101c33); overflow: hidden; }
+.leader-identity:after { content: ""; position: absolute; width: 210px; height: 210px; border: 1px solid rgba(212,175,55,.14); border-radius: 50%; right: -80px; top: -70px; }
+.leader-index { position: absolute; top: 1.5rem; right: 1.5rem; color: rgba(212,175,55,.4); font: 400 2.8rem Cinzel,serif; }
+.leader-monogram { width: 78px; height: 78px; display: grid; place-items: center; margin-bottom: 2rem; border: 1px solid var(--gold); color: var(--gold); font: 500 1.55rem Cinzel,serif; }
+.leader-role { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .62rem; }
+.leader-identity h3 { color: #fff; font-size: 1.65rem; margin: .45rem 0 0; }
+.leader-copy { padding: 2.5rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+.leader-copy > i { color: var(--gold); font-size: 1.3rem; }
+.leader-copy blockquote { margin: 1rem 0 1.25rem; color: var(--navy); font: 500 1.1rem/1.6 Cinzel,serif; }
+.leader-copy p { margin: 0; font-size: .86rem; }
+
+.about-commitment { background: var(--navy); }
+.about-commitment .about-section-heading h2 { color: #fff; }
+.about-commitment .about-section-heading > p { color: #b8c0ce; }
+.commitment-grid { max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); border-top: 1px solid rgba(212,175,55,.25); border-bottom: 1px solid rgba(212,175,55,.25); }
+.commitment-grid article { position: relative; min-height: 280px; padding: 2.2rem 1.5rem; border-right: 1px solid rgba(212,175,55,.18); transition: background .3s, transform .3s; }
+.commitment-grid article:first-child { border-left: 1px solid rgba(212,175,55,.18); }
+.commitment-grid article:hover { background: var(--dark); transform: translateY(-8px); }
+.commitment-number { position: absolute; right: 1rem; top: 1rem; color: rgba(255,255,255,.11); font: 400 2.5rem Cinzel,serif; }
+.commitment-grid i { margin: 2.5rem 0 2rem; color: var(--gold); font-size: 1.7rem; }
+.commitment-grid h3 { color: #fff; font-size: 1rem; line-height: 1.45; }
+.commitment-grid p { color: #aeb7c5; font-size: .76rem; line-height: 1.7; margin: 0; }
+
+.about-closing { max-width: none; margin: 0; padding: 7rem 1.5rem; text-align: center; background: #f5f6f8; border: 0; }
+.about-closing > i { color: rgba(212,175,55,.35); font-size: 2rem; }
+.about-closing p { max-width: 900px; margin: 1.5rem auto; color: var(--navy); font: 400 clamp(1.45rem,3vw,2.5rem)/1.45 Cinzel,serif; }
+.about-closing > span { display: block; width: 60px; height: 1px; margin: 2rem auto; background: var(--gold); }
+.about-closing strong { color: var(--gold); font: 700 .7rem Inter,sans-serif; text-transform: uppercase; letter-spacing: .22em; }
+
+@media(max-width:1000px) {
+  .about-intro { grid-template-columns: 1fr; }
+  .about-visual { min-height: 520px; }
+  .about-visual-badge { right: 1rem; }
+  .leader-card { grid-template-columns: .9fr 1.1fr; }
+  .commitment-grid { grid-template-columns: repeat(2,1fr); border-bottom: 0; }
+  .commitment-grid article { border-bottom: 1px solid rgba(212,175,55,.18); }
+}
+@media(max-width:760px) {
+  .about-intro, .about-leadership, .about-commitment { padding: 5rem 1.2rem; }
+  .about-visual { min-height: 430px; }
+  .about-image-primary { inset: 0 0 3rem 8%; }
+  .about-image-secondary { width: 44%; height: 38%; }
+  .about-visual-badge { min-width: auto; padding: 1rem; }
+  .about-expertise { grid-template-columns: repeat(2,1fr); padding: 0 1.2rem; }
+  .about-expertise div:nth-child(3) { border-top: 1px solid rgba(212,175,55,.18); }
+  .about-expertise div:nth-child(4) { border-top: 1px solid rgba(212,175,55,.18); }
+  .about-philosophy { padding: 5rem 1.2rem; grid-template-columns: 1fr; gap: 1.5rem; }
+  .philosophy-line { display: none; }
+  .about-philosophy p { columns: 1; }
+  .about-section-heading { display: block; margin-bottom: 3rem; }
+  .about-section-heading > p { margin-top: 1.5rem; }
+  .leader-card { grid-template-columns: 1fr; }
+  .leader-identity { min-height: 260px; }
+  .leader-copy { padding: 2rem 1.5rem; }
+}
+@media(max-width:520px) {
+  .about-visual { min-height: 390px; }
+  .about-image-primary { inset: 0 0 4rem 0; }
+  .about-image-secondary { display: none; }
+  .about-visual-badge { right: -.5rem; bottom: 1.5rem; }
+  .about-expertise div { padding: 1.7rem .7rem; }
+  .commitment-grid { grid-template-columns: 1fr; }
+  .commitment-grid article { min-height: auto; padding: 1.7rem; }
+  .commitment-grid i { margin: 1.5rem 0; }
+  .about-closing { padding: 5rem 1.2rem; }
+}

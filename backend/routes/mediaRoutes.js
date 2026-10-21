@@ -1,0 +1,1 @@
+const express=require('express');const{getPropertyMedia,previewGoogleDriveMedia}=require('../controllers/mediaController');const{protectAdmin}=require('../middleware/authMiddleware');const router=express.Router();router.get('/properties/:id',getPropertyMedia);router.post('/google-drive/preview',protectAdmin,previewGoogleDriveMedia);module.exports=router;

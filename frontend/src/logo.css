@@ -1,0 +1,77 @@
+.brand-image-link {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  line-height: 0;
+  flex: 0 0 auto;
+}
+.brand-logo {
+  display: block;
+  width: auto;
+  object-fit: contain;
+}
+.navbar-logo {
+  width: clamp(120px, 14vw, 150px);
+  height: clamp(36px, 4vw, 46px);
+  max-width: 150px;
+  object-fit: cover;
+  object-position: center 51%;
+}
+.admin-logo {
+  height: 62px;
+  max-width: 140px;
+}
+.footer-logo {
+  width: clamp(120px, 16vw, 170px);
+  height: clamp(36px, 4vw, 52px);
+  max-width: 170px;
+  object-fit: cover;
+  object-position: center 51%;
+}
+.site-footer .brand-image-link {
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+.login-logo {
+  height: 120px;
+  max-width: 210px;
+}
+.transition-brand-logo {
+  height: 82px;
+  max-width: 125px;
+}
+.transition-spinner:has(.transition-brand-logo) {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  border-color: rgba(212, 175, 55, 0.2);
+  animation: none;
+}
+.transition-spinner:has(.transition-brand-logo)::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid transparent;
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@media (max-width: 600px) {
+  .navbar-logo {
+    width: 154px;
+    height: 48px;
+    max-width: 154px;
+  }
+  .admin-logo {
+    height: 56px;
+    max-width: 120px;
+  }
+  .footer-logo {
+    width: 176px;
+    height: 54px;
+    max-width: 176px;
+  }
+  .login-logo {
+    height: 100px;
+  }
+}

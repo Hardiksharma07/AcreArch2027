@@ -1,0 +1,2 @@
+import { Navigate,useLocation,useNavigate } from 'react-router-dom';import{authService}from'../services/authService';
+export default function ProtectedAdminRoute({children}){const location=useLocation(),navigate=useNavigate();if(!authService.isAuthenticated())return <Navigate to="/admin/login" replace state={{from:location}}/>;const logout=()=>{authService.logout();navigate('/admin/login',{replace:true})};return <><button className="admin-logout" onClick={logout}><i className="fa-solid fa-arrow-right-from-bracket"/> Logout</button>{children}</>}

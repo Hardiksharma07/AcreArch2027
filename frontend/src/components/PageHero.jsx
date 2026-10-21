@@ -1,0 +1,1 @@
+export default function PageHero({ eyebrow, title, children }) { return <section className="page-hero"><div><span className="eyebrow badge">{eyebrow}</span><h1>{title}</h1>{children && <p>{children}</p>}</div></section>; }
